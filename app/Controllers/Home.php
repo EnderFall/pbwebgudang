@@ -50,6 +50,18 @@ class Home extends BaseController
 			return redirect()->to('index');
 		}
 	}
+
+	public function laporan()
+	{
+		if(session()->get('id')>0){
+		echo view('header');
+		echo view('menu');
+		echo view('laporan');
+		echo view('footer');
+		} else {
+			return redirect()->to('index');
+		}
+	}
 	public function barangfn()
 	{
 		if (session()->get('level')==1 || session()->get('level')==3){

@@ -7,7 +7,11 @@
         <th>ID Barang</th>
         <th width="5%">Jumlah</th>
         <th>Date</th>
+        <?php
+          if (session()->get('level')==1|| session()->get('level')==3){
+            ?>
         <th>Aksi</th>
+        <?php } ?>
       </tr>
     </thead>
     <tbody>
@@ -21,11 +25,15 @@
         <td><?= $value->id_brg ?></td>
          <td><?= $value->jumlah ?></td>
          <td><?= $value->tanggal ?></td>
-         <td>
-          <a href="<?= base_url('home/edit_barangklr/' .$value->id_bk) ?>"><button class="btn btn-warning">Edit</button></a>
-          
+         
+          <?php
+          if (session()->get('level')==1|| session()->get('level')==3){
+            ?>
+            <td>
           <a href="<?= base_url('home/hapus_barangkeluar/' .$value->id_bk) ?>"><button class="btn btn-danger">Hapus</button></a>
-        </td>
+         </td> 
+         <?php } ?>
+        
 
 
       </tr>

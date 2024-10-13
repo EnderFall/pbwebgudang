@@ -22,7 +22,7 @@
          <td><?= $value->jumlah ?></td>
          <td><?= $value->tanggal ?></td>
          <td>
-          <a href="<?= base_url('home/edit_barangmsk/' .$value->id_bm) ?>"><button class="btn btn-warning">Edit</button></a>
+          
           
           <a href="<?= base_url('home/hapus_barangmasuk/' .$value->id_bm) ?>"><button class="btn btn-danger">Hapus</button></a>
         </td>

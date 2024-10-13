@@ -45,6 +45,12 @@
     </ul>
   </li>
   <?php } ?>
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Laporan</a>
+    <ul class="dropdown-menu">
+      </ul>
+      </li>
   
   <li class="nav-item">
   <a class="nav-link active" href="<?= base_url('home/logout'); ?>">Logout</a>
