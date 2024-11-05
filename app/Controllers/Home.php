@@ -567,8 +567,8 @@ public function hapus_barang($id){
 	{
 		if (session()->get('level')==1){
 		$Joyce= new M_belajar;
-		
-		$wendy['anjas'] = $Joyce->tampil('user');
+		$where = ('id_user');
+		$wendy['anjas'] = $Joyce->tampil('user', $where);
 		echo view('header');
 		echo view('menu');
 		echo view('User/tabeluser', $wendy);
@@ -607,14 +607,13 @@ public function hapus_barang($id){
 
 
 
-
 	//Tabel Karyawan
 	public function tabeldatakaryawan()
 	{
 		if(session()->get('level') ==1){
 		$Joyce= new M_belajar;
-		$where = ('id_kry');
-		$wendy['anjas'] = $Joyce->tampil('karyawan', $where);
+		$by = ('id_kry');
+		$wendy['anjas'] = $Joyce->tampil('karyawan', $by);
 		echo view('header');
 		echo view('menu');
 		echo view('Karyawan/tabelkaryawan', $wendy);
